@@ -41,7 +41,7 @@ function getID(len) {
 }
 
 function generateID() {
-    const input = document.querySelector(".chars-amount-input")
+    const input = document.querySelector(".id-length-input")
     // if no integer is provided, default to 16
     const length = input.value.length === 0 ? 16 : input.value;
     const ID = getID(length);

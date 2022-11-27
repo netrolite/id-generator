@@ -5,16 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ID generator</title>
+    <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 <body>
     <main>
         <h1>Generate a random ID</h1>
-        <p>Amount of characters</p>
-        <div class="parameters">
-            <input type="number" class="chars-amount-input" />
-            <button onclick="generateID()">Generate</button>
+
+        <div class="param">
+            <label for="chars-amount">ID length</label>
+            <input
+                type="number"
+                id="id-length"
+                class="id-length-input"
+                placeholder="16" 
+            />
+            
         </div>
+
+        <button onclick="generateID()" class="btn-generate">Generate</button>
+
         <div class="generated-string"></div>
     </main>
 </body>
