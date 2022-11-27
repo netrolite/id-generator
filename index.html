@@ -18,13 +18,14 @@
                 type="number"
                 id="id-length"
                 class="id-length-input"
-                placeholder="16" 
+                placeholder="16"
             />
-            
         </div>
 
-        <button onclick="generateID()" class="btn-generate">Generate</button>
-
+        <div class="btn-wrapper">
+            <button onclick="generateID()" class="btn-generate">Generate</button>
+            <div class="time-elapsed"></div>
+        </div>
         <div class="generated-string"></div>
     </main>
 </body>

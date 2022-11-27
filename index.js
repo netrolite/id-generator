@@ -1,4 +1,7 @@
 function getID(len) {
+    // for measuring how long it took
+    const startTime = new Date().getTime();
+
     // UTF-16 codes of all english letters in capital case (A-Z)
     const charCodes = Array.from(Array(26), (el, index) => index + 65);
     // actual letters from character codes + dash ("-")
@@ -37,13 +40,18 @@ function getID(len) {
             id += randomNumber();
         }
     }
-    return id
+    const endTime = new Date().getTime();
+    const timeElapsed = endTime - startTime;
+    return {id, timeElapsed}
 }
 
 function generateID() {
     const input = document.querySelector(".id-length-input")
     // if no integer is provided, default to 16
     const length = input.value.length === 0 ? 16 : input.value;
-    const ID = getID(length);
+    const data = getID(length);
+    const ID = data.id;
+    const timeElapsed = data.timeElapsed;
     document.querySelector(".generated-string").textContent = ID;
+    document.querySelector(".time-elapsed").textContent = timeElapsed + " ms";
 }
