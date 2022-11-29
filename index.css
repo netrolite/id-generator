@@ -11,8 +11,8 @@ body {
 main {
     max-width: 700px;
     min-height: 100vh;
-    margin: auto;
-    margin: 20px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 h1 {
@@ -39,6 +39,9 @@ h1 {
 
 .btn-generate {
     padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: lightblue;
 }
 
 .generated-string {
